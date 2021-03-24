@@ -28,6 +28,10 @@ import re
 import subprocess
 from datetime import datetime
 
+# Build with maven
+os.system('mvn install -DskipSphinxTests=true -f ../pom.xml')
+os.system('cp ../target/sphinx/formats/*.rst ./formats')
+
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
